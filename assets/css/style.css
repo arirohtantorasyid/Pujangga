@@ -7,23 +7,73 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Style untuk Header Slider */
+.header-slider {
+    width: 100%;
+    overflow: hidden; /* Penting untuk slider */
+    margin-bottom: 20px; /* Beri jarak dengan konten di bawah */
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Sesuaikan tinggi slider */
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none; /* Awalnya sembunyikan semua slide */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar memenuhi area slider */
+}
+
+/* Efek Fade (Opsional, bisa dihilangkan jika tidak ingin efek fade) */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 h1 {
     margin: 0;
+    color: white; /* Warna judul di header slider */
 }
 
+header p {
+    color: white; /* Warna paragraf di header slider */
+}
+
+/* Navigasi Header (jika masih ada, bisa disembunyikan atau dihapus) */
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
-    background-color: #333;
+    background-color: #333; /* Warna latar belakang navigasi header */
     margin: 0;
+    display: none; /* Sembunyikan navigasi header */
 }
 
 nav ul li {
@@ -92,4 +142,65 @@ footer {
     background-color: #333;
     color: white;
     margin-top: 40px;
+}
+
+
+/* Style untuk Bottom Navigation */
+.bottom-nav {
+    position: fixed; /* Tetap di posisi bawah saat di-scroll */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Warna latar belakang bottom nav */
+    padding: 10px 0;
+    z-index: 100; /* Pastikan di atas konten lain */
+}
+
+.bottom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Gunakan flexbox untuk tata letak horizontal */
+    justify-content: space-around; /* Spasi merata antar item */
+}
+
+.bottom-nav ul li {
+    flex: 1; /* Setiap item mengisi ruang yang sama */
+    text-align: center; /* Teks di tengah item */
+}
+
+.bottom-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px; /* Ukuran font lebih kecil dari header nav */
+    display: block; /* Link mengisi seluruh area li */
+}
+
+.bottom-nav ul li a:hover {
+    background-color: #575757; /* Efek hover tetap ada */
+}
+
+
+/* Responsif - Media Queries */
+@media screen and (max-width: 768px) {
+    /* Style untuk layar yang lebih kecil (misalnya ponsel) */
+    .header-slider .slider-container {
+        height: 150px; /* Tinggi slider lebih kecil di ponsel */
+    }
+    .bottom-nav ul li a {
+        font-size: 14px; /* Ukuran font bottom nav lebih kecil di ponsel */
+        padding: 8px; /* Padding lebih kecil di ponsel */
+    }
+    section {
+        margin: 10px; /* Margin section lebih kecil di ponsel */
+        padding: 15px; /* Padding section lebih kecil di ponsel */
+    }
+    .intro-images {
+        flex-direction: column; /* Gambar intro jadi kolom di ponsel */
+    }
+    .intro-image {
+        width: 100%; /* Gambar intro jadi penuh lebar di ponsel */
+        margin-bottom: 10px; /* Spasi bawah gambar intro di ponsel */
+    }
 }

@@ -7,34 +7,39 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Pujangga</h1>
-        <p>Sastra untuk Semua</p>
+    <!-- Slider Gambar (hanya sastra1.jpg dan sastra2.jpg) -->
+          
+    <header class="header-slider">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide fade">
+                    <img src="assets/images/slider1.png" alt="Gambar Slider 1">  <!-- Menggunakan slider1.png -->
+                </div>
+                <div class="slide fade">
+                    <img src="assets/images/slider2.png" alt="Gambar Slider 2">  <!-- Menggunakan slider2.png -->
+                </div>
+                <div class="slide fade">
+                    <img src="assets/images/slider3.png" alt="Gambar Slider 3">  <!-- Menggunakan slider3.png -->
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Navigasi -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="karya.html">Karya</a></li>
-            <li><a href="tentang.html">Tentang Kami</a></li>
-            <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
-        </ul>
-    </nav>
+        
 
-    <!-- Konten Utama -->
+    <!-- Konten Utama (termasuk gambar kotak intro-images) -->
     <section>
         <h2>Selamat datang di Pujangga!</h2>
         <p>Platform untuk berbagi dan menikmati karya sastra.</p>
 
-        <!-- Penjelasan tentang tujuan Pujangga -->
+        <!-- Gambar Kotak Intro (tetap seperti semula, di bawah slider) -->
         <div class="intro-images">
             <img src="assets/images/sastra1.jpg" alt="Ilustrasi Sastra" class="intro-image">
             <img src="assets/images/sastra2.jpg" alt="Ilustrasi Sastra" class="intro-image">
         </div>
-        
+
         <p>Pujangga adalah tempat di mana penulis dan penyair bisa mengekspresikan karya sastra mereka dan berbagi dengan dunia. Kami memberikan ruang bagi setiap orang untuk menikmati karya-karya yang mencerahkan dan memotivasi. Baik Anda seorang penulis yang ingin berbagi cerita atau seorang pembaca yang mencari inspirasi, Pujangga adalah tempat yang tepat untuk Anda.</p>
-        
+
         <h3>Apa yang bisa Anda temukan di Pujangga?</h3>
         <ul>
             <li><strong>Karya Sastra:</strong> Temukan berbagai jenis karya sastra dari penulis berbakat.</li>
@@ -43,21 +48,19 @@
         </ul>
     </section>
 
-    <!-- Testimonial Pengguna -->
-    <section class="testimonials">
-        <h3>Apa Kata Pengguna Kami?</h3>
-        <div class="testimonial">
-            <p>"Pujangga memberikan saya ruang untuk menulis dan berbagi cerita dengan banyak orang. Ini adalah platform yang luar biasa untuk penulis!"</p>
-            <p>- Penulis A</p>
-        </div>
-        <div class="testimonial">
-            <p>"Sebagai pembaca, saya merasa terinspirasi setiap kali membaca karya-karya di Pujangga. Platform ini menyajikan banyak tulisan yang penuh makna."</p>
-            <p>- Pembaca B</p>
-        </div>
-    </section>
+    <!-- Bottom Navigation dan Footer (tetap di bawah) -->
+    <nav class="bottom-nav">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="karya.html">Karya</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+        </ul>
+    </nav>
 
     <footer>
-        <p>&copy; 2025 Pujangga. Semua hak cipta dilindungi.</p>
+        <p>© 2025 Pujangga. Semua hak cipta dilindungi.</p>
     </footer>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
